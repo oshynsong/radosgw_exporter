@@ -30,6 +30,7 @@ One can get the IOPS of uploading objects to the radosgw service on bucket `abc`
 sum(delta(radosgw_bytes_recv_total{user='admin',bucket='abc'}[2m])) by (put_obj)
 ```
 
+You can easily write other query statements to get your concerns of the radosgw service of a ceph cluster.
 
 ## Usage
 
@@ -56,7 +57,7 @@ Usage of radosgw_exporter:
     	secret access key of the admin user of radosgw service
 ```
 
-One can just start the program with the AK/SK of the radosgw service, and config
+One can just start the program with the endpoint and AK/SK of the radosgw service, and config
 the prometheus like following snippet:
 
 ```
